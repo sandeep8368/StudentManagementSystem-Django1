@@ -1,0 +1,26 @@
+{% extends 'html/display.html' %}
+
+{% block title %}
+    <h1>Add Student</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post" class="form-box">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="name" required><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" required><br><br>
+
+        <label for="pass">Password</label>
+        <input type="password" name="pass" required><br><br>
+
+        <button class="btn btn-add">Submit</button>
+    </form>
+
+    <br><br> 
+    <a href="{% url 'dis' %}">
+        <button class="btn btn-update">All Students</button>
+    </a>
+{% endblock %}
